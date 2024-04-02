@@ -1,0 +1,76 @@
+// Variabelen
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-family: Arial, sans-serif;
+$spacing: 20px;
+$background-color: #333;
+$text-color: #fff;
+$service-background-color: #f4f4f4;
+
+// Namespace voor margin
+.margin {
+    margin: 0;
+    padding: 0;
+}
+
+// Header stijl met achtergrondkleur variabele en font namespace
+header {
+    background-color: $background-color;
+    color: $text-color;
+    padding: $spacing;
+    @extend .font;
+}
+
+// Nav stijl met kleur variabele
+nav {
+    background-color: $background-color;
+    color: $text-color;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline;
+            margin-right: $spacing;
+
+            a {
+                color: $text-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// Main stijl met gebruik van grid en variabele voor padding
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $spacing;
+    padding: $spacing;
+}
+
+// Services stijl met flexbox en achtergrondkleur variabele
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+// Service stijl met achtergrondkleur variabele en margin namespace
+.service {
+    background-color: $service-background-color;
+    padding: $spacing;
+    margin-bottom: $spacing;
+    @extend .margin;
+}
+
+// Footer stijl met achtergrondkleur variabele
+footer {
+    background-color: $background-color;
+    color: $text-color;
+    padding: $spacing;
+    text-align: center;
+    @extend .font;
+}
